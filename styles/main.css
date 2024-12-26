@@ -382,165 +382,114 @@ html {
 
 
 /* Responsive Design */
+/* Responsive Design */
 
-/* Large Tablets / Small Desktops */
-@media (max-width: 1200px) {
+/* Small Devices (phones, less than 600px) */
+@media (max-width: 600px) {
     .nav-bar {
+        flex-direction: column;
         padding-inline: 5vw;
+        text-align: center;
     }
-
-    .features-grid, .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-logo {
+        margin-bottom: 10px;
     }
-
-    .testimonials-grid {
+    .nav-menu {
+        flex-direction: column;
+    }
+    .nav-link a {
+        margin-inline: 10px;
+        font-size: 0.9rem;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
         gap: 15px;
+    }
+    .testimonials-grid {
+        flex-direction: column;
+    }
+    .pricing-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+    .btn-1, .btn-2 {
+        width: 100%;
+    }
+    .footer-content p {
+        font-size: 0.8rem;
     }
 }
 
-/* Tablets */
-@media (max-width: 992px) {
-    .nav-menu {
-        flex-wrap: wrap;
-        gap: 10px;
+/* Medium Devices (tablets, 600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .nav-bar {
+        padding-inline: 7vw;
     }
-
+    .nav-menu {
+        gap: 15px;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 40px;
+    }
+    .hero-content {
+        text-align: center;
+    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
-
-    .hero-content p {
-        font-size: 1rem;
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
     }
-
-    .features-grid, .pricing-grid {
-        grid-template-columns: repeat(1, 1fr);
+    .pricing-grid {
+        flex-direction: row;
+        gap: 40px;
     }
-
-    .testimonial-card {
-        max-width: 90%;
-    }
-
-    .contact-form input, .contact-form textarea, .btn-send {
-        width: 90%;
-    }
-}
-
-/* Portrait Tablets / Larger Phones */
-@media (max-width: 768px) {
-    .nav-bar {
-        flex-direction: column;
-        height: auto;
-        text-align: center
-    }
-
-    .nav-menu-btn {
-        display: block
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .features, .pricing, .testimonials {
-        padding: 40px 20px;
-    }
-    
-    .feature-card, .pricing-card, .testimonial-card {
-        margin: 0 auto;
-    }
-}
-
-/* Small Phones */
-@media (max-width: 576px) {
-    .nav-logo {
-        font-size: 1.5rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .btn-1, .btn-2 {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .testimonial-card {
+    .pricing-card {
         padding: 15px;
     }
-
-    .contact-form input, .contact-form textarea, .btn-send {
-        font-size: 14px;
-    }
-
-    .feature-card, .pricing-card, .testimonial-card {
-        margin: 10px auto;
-        padding: 15px;
-    }
-
-    .hidden {
-        transform: translateY(50px);
-    }
 }
 
-/* Landscape Orientation For Tablets */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
+/* Large Devices (desktops, greater than 1024px) */
+@media (min-width: 1024px) {
     .nav-bar {
-        padding-inline: 5vw;
-        flex-wrap: wrap;
+        padding-inline: 9vw;
     }
-
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
     .testimonials-grid {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+    }
+    .pricing-grid {
+        flex-direction: row;
+        gap: 60px;
     }
 }
 
-/* Extra Small Phones */
-@media (max-width: 400px) {
-    .nav-logo {
-        font-size: 1.2rem;
+/* Ultra-wide screens (greater than 1600px) */
+@media (min-width: 1600px) {
+    .nav-bar {
+        padding-inline: 12vw;
     }
-
-    .nav-link a {
-        font-size: 0.9rem;
-    }
-    
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 4rem;
     }
-
-    .hero-content p {
-        font-size: 0.8rem;
-    }
-
-    .btn-1, .btn-2 {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    
-    .testimonial-card {
-        font-size: 0.9rem;
-    }
-    
-    .contact-form input, .contact-form textarea {
-        font-size: 12px;
+    .pricing-card {
+        padding: 25px;
     }
 }
+
 
 
