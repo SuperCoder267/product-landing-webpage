@@ -30,7 +30,17 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// Toggle Pricing 
+// Show nav bar button on smaller screens to enhance responsiveness
+document.addEventListener('DOMContentLoaded', () => {
+    const navMenu = document.querySelector('.nav-menu');
+    const navMenuBtn = document.querySelector('.nav-menu-btn');
+
+    navMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('menu-visible');
+    });
+});
+
+// Toggle pricing 
 document.addEventListener('DOMContentLoaded', () => {
     const monthlyBtn = document.getElementById('monthly-btn');
     const yearlyBtn = document.getElementById('yearly-btn');
