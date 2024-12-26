@@ -98,6 +98,26 @@ html {
     transition: color 0.3s;
 }
 
+.nav-menu-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #ff5722;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.nav-menu-btn:hover {
+    background-color: #424242;
+    transform: scale(1.1);
+}
+.nav-menu-btn i {
+    font-size: 20px;
+    color: #ff5722;
+}
+
 .btn-1:active, .btn-2:active, .nav-theme-btn:active {
     transform: scale(0.95);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -171,6 +191,33 @@ html {
 
 .nav-menu, .nav-link {
     display: flex;
+}
+
+.nav-menu.menu-visible {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #121212;
+    z-index: 999;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 0px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    form {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .nav-link {
@@ -382,114 +429,252 @@ html {
 
 
 /* Responsive Design */
-/* Responsive Design */
 
-/* Small Devices (phones, less than 600px) */
+/* Small Devices less than 600 px */
 @media (max-width: 600px) {
     .nav-bar {
         flex-direction: column;
-        padding-inline: 5vw;
+        align-items: center;
+        padding: 20px 5vw;
         text-align: center;
+        height: auto;
     }
+    
     .nav-logo {
+        font-size: 1.5rem;
         margin-bottom: 10px;
     }
+
     .nav-menu {
         flex-direction: column;
+        gap: 5px;
     }
+
     .nav-link a {
-        margin-inline: 10px;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 8px;
+        margin: 5px 0;
     }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-theme-btn {
+        margin-top: 10px;
+    }
+
     .hero {
         flex-direction: column;
         padding: 20px;
     }
+
     .hero-content {
         width: 100%;
         text-align: center;
     }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+
+    .feature-card {
+        padding: 15px;
+    }
+
     .testimonials-grid {
         flex-direction: column;
+        gap: 10px;
     }
+
     .pricing-grid {
         flex-direction: column;
         gap: 20px;
     }
+
     .contact-form input, .contact-form textarea {
         width: 100%;
     }
+
     .btn-1, .btn-2 {
         width: 100%;
     }
+
     .footer-content p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
-/* Medium Devices (tablets, 600px to 1024px) */
+/* Hide nav menu and show menu button on smaller screens */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.menu-visible {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+        color: #e0e0e0;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 10px 0;
+        transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+        color: #ff5722;
+    }
+
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: auto;
+    }
+
+    .nav-logo {
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .nav-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-menu-btn {
+        display: inline-block;
+    }
+}
+
+/* Medium Devices/tablets 600px to 1024px */
 @media (min-width: 600px) and (max-width: 1024px) {
     .nav-bar {
-        padding-inline: 7vw;
+        flex-direction: row;
+        padding: 10px 7vw;
     }
+
     .nav-menu {
         gap: 15px;
     }
+
+    .nav-link a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .nav-theme-btn {
+        margin-left: auto;
+    }
+
     .hero {
         flex-direction: column;
         padding: 40px;
-    }
-    .hero-content {
         text-align: center;
     }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
     .features-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
+
+    .testimonials-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .pricing-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .btn-1, .btn-2 {
+        width: auto;
+    }
+
+    .footer-content p{
+        font-size: 1rem;
+    }
+}
+
+/* Large devices/desktops greater than 1024px */
+@media (min-width: 1024px) and (max-width: 1600px) {
+    .nav-bar {
+        padding-inline: 8vw;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .pricing-grid {
         flex-direction: row;
         gap: 40px;
     }
-    .pricing-card {
-        padding: 15px;
-    }
 }
 
-/* Large Devices (desktops, greater than 1024px) */
-@media (min-width: 1024px) {
-    .nav-bar {
-        padding-inline: 9vw;
-    }
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .testimonials-grid {
-        flex-direction: row;
-    }
-    .pricing-grid {
-        flex-direction: row;
-        gap: 60px;
-    }
-}
-
-/* Ultra-wide screens (greater than 1600px) */
+/* Very wide screens greater than 1600px */
 @media (min-width: 1600px) {
     .nav-bar {
         padding-inline: 12vw;
     }
+
     .hero-content h1 {
         font-size: 4rem;
     }
+
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+
+    .feautes-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
     .pricing-card {
         padding: 25px;
     }
 }
-
-
-
