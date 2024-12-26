@@ -1,1 +1,546 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* Transitions */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(120 deg, #333, #555);
+}
+
+/* Button Styles */
+.btn-1 {
+    background-color: #ff5722;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s;
+}
+.btn-1:hover {
+    background-color: #e64a19;
+}
+
+.btn-2 {
+    background-color: #1a73e8;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s;
+}
+.btn-2:hover {
+    background-color: #155cb3;
+}
+
+.nav-theme-btn {
+    background-color: #333;
+    color: #ff5722;
+    border: 2px solid #424242;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.nav-theme-btn:hover {
+    background-color: #424242;
+    border-color: #ff5722;
+    transform: scale(1.1);
+}
+
+.nav-theme-btn i {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.btn-1:active, .btn-2:active, .nav-theme-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background: #424242;
+    color: #fff;
+    border: 2px solid #ff5722;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.toggle-btn.active {
+    background: #ff5722;
+    color: #fff;
+    transform: scale(1.05);
+}
+.toggle-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Headings */
+.features h2, .testimonials h2, .pricing h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    position: fixed;
+    background-image: linear-gradient(90deg, #212121, #424242);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    padding-inline: 9vw;
+    transition: 0.3s;
+    z-index: 100;
+    color: #fff;
+}
+.nav-bar.scrolled {
+    background-color: rgba(33, 33, 33, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav-logo {
+    position: relative;
+}
+.nav-bar.scrolled .nav-logo {
+    transform: scale(0.9);
+}
+.nav-bar.scrolled .nav-link a {
+    font-size: 0.9rem;
+}
+
+.nav-menu, .nav-link {
+    display: flex;
+}
+
+.nav-link {
+    list-style: none;
+    position: relative;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding-inline: 15px;
+    margin-inline: 20px;
+    transition: color 0.3s;
+}
+.nav-link a:hover {
+    color: #ff5722;
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+/* Main Section */
+.main-doc {
+    padding-top: 90px;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: #1e1e1e;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #bdbdbd;
+}
+
+/* Features Section */
+.features {
+    padding: 60px;
+    background-color: #212121;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: #424242;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card h3, p {
+    margin-top: 20px;
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #ff5722;
+    transition: transform 0.3s, color 0.3s;
+}
+.feature-card i:hover {
+    color: #e64a19;
+    transform: scale(1.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px;
+    background-color: #1e1e1e;
+    text-align: center;
+    animation: fadeIn 2.5s ease;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-card p {
+    margin-bottom: 15px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 60px;
+    background-color: #212121;
+    text-align: center;
+    animation: fadeIn 3s ease;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: #424242;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card .features-list {
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.pricing-card li {
+    list-style-position: inside;
+}
+
+/* Contact/Footer Section */
+.contact {
+    background-color: #121212;
+    color: #bdbdbd;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 3.5s ease;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #424242;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.btn-send {
+    width: 50%;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-send:hover {
+    background-color: #1558b3;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+/* Responsive Design */
+
+/* Large Tablets / Small Desktops */
+@media (max-width: 1200px) {
+    .nav-bar {
+        padding-inline: 5vw;
+    }
+
+    .features-grid, .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        gap: 15px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features-grid, .pricing-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimonial-card {
+        max-width: 90%;
+    }
+
+    .contact-form input, .contact-form textarea, .btn-send {
+        width: 90%;
+    }
+}
+
+/* Portrait Tablets / Larger Phones */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        text-align: center
+    }
+
+    .nav-menu-btn {
+        display: block
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .features, .pricing, .testimonials {
+        padding: 40px 20px;
+    }
+    
+    .feature-card, .pricing-card, .testimonial-card {
+        margin: 0 auto;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 576px) {
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-1, .btn-2 {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea, .btn-send {
+        font-size: 14px;
+    }
+
+    .feature-card, .pricing-card, .testimonial-card {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .hidden {
+        transform: translateY(50px);
+    }
+}
+
+/* Landscape Orientation For Tablets */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-bar {
+        padding-inline: 5vw;
+        flex-wrap: wrap;
+    }
+
+    .testimonials-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-link a {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .btn-1, .btn-2 {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .testimonial-card {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form input, .contact-form textarea {
+        font-size: 12px;
+    }
+}
+
 
