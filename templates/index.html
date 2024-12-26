@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Landing Page</title>
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" href="../styles/main.css">
+        <!-- JavaScript -->
+        <script src="../scripts/main.js" defer></script>
+        <!-- Font Import -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- External Icon Import -->
+        <script src="https://kit.fontawesome.com/afdb767fb8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header class="nav">
+            <nav class="nav-bar">
+                <div class="nav-logo">Logo</div>
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="#home">Home</a></li>
+                    <li class="nav-link"><a href="#features">Features</a></li>
+                    <li class="nav-link"><a href="#testimonials">Testimonials</a></li>
+                    <li class="nav-link"><a href="#pricing">Pricing</a></li>
+                    <li class="nav-link"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-btn">
+                    <button class="nav-theme-btn"><i class="fa-solid fa-sun"></i></button>
+                    <button class="nav-menu-btn"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </nav>
+        </header>
 
+        <!-- Main Section -->
+        <main class="main-doc">
+             <!-- Hero Section -->
+            <section class="hero hidden" id="home">
+                <div class="hero-content">
+                    <h1 class="hidden" id="header">Revolutionize Your Experience</h1>
+                    <p class="hidden">Lorem ipsum odor amet, consectetuer adipiscing elit. Elit torquent platea faucibus platea porta eu morbi. Commodo vulputate nunc justo curabitur neque viverra sociosqu massa. Laoreet mauris aptent sed praesent congue ligula.</p>
+                    <button class="btn-2 hidden" id="hero-btn">Learn More</button>
+                </div>
+                <div class="hero-img hidden">
+                    <img src="img" alt="Product Image">
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features hidden" id="features">
+                <h2 class="hidden" id="header">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card hidden">
+                        <i class="fa-solid fa-link"></i>
+                        <h3 id="header">Seamless Integration</h3>
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ex magnis non nullam eu arcu sollicitudin.</p>
+                    </div>
+                    <div class="feature-card hidden">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3 id="header">Advanced Analytics</h3>
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ex magnis non nullam eu arcu sollicitudin.</p>
+                    </div>
+                    <div class="feature-card hidden">
+                        <i class="fa-solid fa-tools"></i>
+                        <h3 id="header">Customizable Solutions</h3>
+                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ex magnis non nullam eu arcu sollicitudin.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials hidden" id="testimonials">
+                <h2 class="hidden" id="header">Testimonials</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card hidden">
+                            <p>"This product has changed the way we operate. Truly outstanding!"</p>
+                            <cite>-Alex J.</cite>
+                        </div>
+                        <div class="testimonial-card hidden">
+                            <p>"A must-have for anyone looking to innovate."</p>
+                            <cite>-Taylor S.</cite>
+                        </div>
+                        <div class="testimonial-card hidden">
+                            <p>"Exceptional quality and amazing support!"</p>
+                            <cite>-Jamie K.</cite>
+                        </div>
+                    </div>
+                </h2>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="pricing hidden" id="pricing">
+                <h2 class="hidden" id="header">Pricing</h2>
+                <div class="pricing-toggle">
+                    <button id="monthly-btn" class="toggle-btn active">Monthly</button>
+                    <button id="yearly-btn" class="toggle-btn">Yearly</button>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card hidden">
+                        <h3 id="header">Standard</h3>
+                        <p class="price" id="price1">$9.99/month</p>
+                        <ul class="features-list"> 
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <button class="btn-1">Choose Plan</button>
+                    </div>
+                    <div class="pricing-card hidden popular">
+                        <h3 id="header">Premium</h3>
+                        <p class="price" id="price2">$19.99/month</p>
+                        <ul class="features-list">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <button class="btn-1">Choose Plan</button>
+                    </div>
+                    <div class="pricing-card hidden">
+                        <h3 id="header">Enterprise</h3>
+                        <p class="price">Custom Pricing</p>
+                        <ul class="features-list">
+                            <li>All Features</li>
+                            <li>Priority Support</li>
+                            <li>Custom Solutions</li>
+                        </ul>
+                        <button class="btn-1">Contact Us</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <footer class="contact" id="contact">
+                <div class="footer-content">
+                    <h3 class="hidden" id="header">Contact Us</h3>
+                    <p class="hidden">Have any questions? Fill the form below and we will reach out to you.</p>
+                    <form class="contact-form hidden">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button class="btn-send">Send</button>
+                    </form>
+                </div>
+                <div class="footer hidden">
+                    <p>&copy; 2024 BrandLogo. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
